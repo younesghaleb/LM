@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE Band [ 
+
+    <!ELEMENT Band (NameBand, (History | Awards)?, Member+, Instument*)>
+    <!ELEMENT NameBand (#PCDATA)>
+    <!ELEMENT History (#PCDATA)>
+    <!ELEMENT Awards (#PCDATA)>
+    <!ELEMENT Member (NameMember, Role, Joined)>
+	    <!ATTLIST Member BDate NMTOKEN #IMPLIED>
+		<!ATTLIST Member Plays IDREF #REQUIRED>
+
+    <!ELEMENT NameMember (#PCDATA)>
+    <!ELEMENT Role (#PCDATA)>
+    <!ELEMENT Joined (#PCDATA)>
+		<!ATTLIST Joined YEAR CDATA #REQUIRED>
+
+    <!ELEMENT Instument (#PCDATA)>
+		<!ATTLIST Instument Id ID #REQUIRED>
+
+]>
+<Band>
+        <NameBand>ABC </NameBand>
+        <History> creation year1977 </History> 
+       
+		<Member BDate="15-02-1979" Plays="C1">
+
+			        <NameMember> Mark white </NameMember>
+					<Role>Singer </Role>
+					<Joined YEAR="1997"/>                
+				
+		 </Member>
+		 <Instument Id="C1"/>
+
+
+        
+</Band>
+
+
+
+
+
+
